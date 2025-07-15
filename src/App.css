@@ -1,0 +1,16 @@
+.app-container {
+  padding: 2rem;
+  font-family: sans-serif;
+}
+
+.viewport-controls {
+  margin-top: 1rem;
+}
+
+.viewport-controls button {
+  margin-right: 0.5rem;
+}
+
+.iframe-container {
+  margin-top: 2rem;
+}
