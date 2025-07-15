@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#wrap {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+#header {
+  display: flex;
+  width: 100%;
+  height: 100px;
+}
+
+#header .logo,
+#header .nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100px;
+}
+
+#header .logo {
+  width: 250px;
+  background: #888;
+}
+
+#header .nav {
+  width: 950px;
+  background: #777;
+}
+
+#banner {
+  width: 100%;
+  height: 300px;
+  background: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#contents {
+  display: flex;
+  width: 100%;
+  height: 200px;
+}
+
+#contents > div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#contents .cont1 {
+  background: #555;
+}
+
+#contents .cont2 {
+  background: #444;
+}
+
+#contents .cont3 {
+  background: #333;
+}
+
+#footer {
+  display: flex;
+  width: 1200px;
+  height: 100px;
+}
+
+#footer > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#footer .foot1 {
+  width: 200px;
+  background: #333;
+}
+
+#footer .foot2 {
+  width: 800px;
+  background: #222;
+}
+
+#footer .foot3 {
+  width: 200px;
+  background: #555;
+}
