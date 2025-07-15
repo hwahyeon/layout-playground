@@ -1,0 +1,20 @@
+.container {
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.editorSection {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.editorBlock {
+  flex: 1;
+  min-width: 300px;
+}
+
+.heading {
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
