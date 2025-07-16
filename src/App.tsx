@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1>Layout Viewer</h1>
+      <h1>Layout Playground</h1>
 
       <LayoutSelector selected={layoutId} onChange={setLayoutId} />
 
