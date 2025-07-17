@@ -1,0 +1,37 @@
+.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f3f4f6;
+  color: #333;
+  padding: 2px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  z-index: 9999;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timer {
+  margin-left: 8px;
+  color: #888;
+  font-weight: normal;
+}
+
+.closeBtn {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+}
+
+.closeBtn:hover {
+  background-color: #e5e7eb;
+  border-color: #aaa;
+  color: #000;
+}

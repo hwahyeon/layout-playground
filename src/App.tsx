@@ -3,6 +3,7 @@ import LayoutSelector from "./components/LayoutSelector";
 import IframePreview from "./components/IframePreview";
 import CodeEditor from "./components/CodeEditor";
 import "./App.css";
+import DesktopNotice from "./components/DesktopNotice";
 
 function App() {
   const [layoutId, setLayoutId] = useState("01");
@@ -27,28 +28,31 @@ function App() {
   }, [layoutId]);
 
   return (
-    <div className="app-container">
-      <h1>Layout Playground</h1>
+    <div>
+      <DesktopNotice />
+      <div className="app-container">
+        <h1 className="app-title">Layout Playground</h1>
 
-      <LayoutSelector selected={layoutId} onChange={setLayoutId} />
+        <LayoutSelector selected={layoutId} onChange={setLayoutId} />
 
-      <div className="viewport-controls">
-        <span>Viewport: </span>
-        <button onClick={() => setViewport("desktop")}>Desktop</button>
-        <button onClick={() => setViewport("tablet")}>Tablet</button>
-        <button onClick={() => setViewport("mobile")}>Mobile</button>
+        <div className="viewport-controls">
+          <span>Viewport: </span>
+          <button onClick={() => setViewport("desktop")}>Desktop</button>
+          <button onClick={() => setViewport("tablet")}>Tablet</button>
+          <button onClick={() => setViewport("mobile")}>Mobile</button>
+        </div>
+
+        <div className="iframe-container">
+          <IframePreview html={htmlCode} css={cssCode} size={viewport} />
+        </div>
+
+        <CodeEditor
+          html={htmlCode}
+          css={cssCode}
+          onHtmlChange={setHtmlCode}
+          onCssChange={setCssCode}
+        />
       </div>
-
-      <div className="iframe-container">
-        <IframePreview html={htmlCode} css={cssCode} size={viewport} />
-      </div>
-
-      <CodeEditor
-        html={htmlCode}
-        css={cssCode}
-        onHtmlChange={setHtmlCode}
-        onCssChange={setCssCode}
-      />
     </div>
   );
 }

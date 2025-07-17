@@ -3,6 +3,10 @@
   font-family: sans-serif;
 }
 
+.app-title{
+  padding-top: 2rem;
+}
+
 .viewport-controls {
   margin-top: 1rem;
   display: flex;
