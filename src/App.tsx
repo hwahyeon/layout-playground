@@ -15,11 +15,12 @@ function App() {
 
   useEffect(() => {
     const load = async () => {
-      const html = await fetch(`/layouts/${layoutId}/index.html`).then((res) =>
-        res.text()
+      const base = import.meta.env.BASE_URL;
+      const html = await fetch(`${base}layouts/${layoutId}/index.html`).then(
+        (res) => res.text()
       );
-      const css = await fetch(`/layouts/${layoutId}/style.css`).then((res) =>
-        res.text()
+      const css = await fetch(`${base}layouts/${layoutId}/style.css`).then(
+        (res) => res.text()
       );
       setHtmlCode(html);
       setCssCode(css);
@@ -43,7 +44,7 @@ function App() {
         </div>
 
         <div className="iframe-container">
-          <IframePreview html={htmlCode} css={cssCode} size={viewport} />
+          <IframePreview html={htmlCode} css={cssCode} size={viewport} layoutId={layoutId}/>
         </div>
 
         <CodeEditor
